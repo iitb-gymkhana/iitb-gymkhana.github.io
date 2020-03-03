@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gymkhana, IITB - local</title>
+
+  <!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="footer.css" />
+
+  <script src="jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <script src="bootstrap/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Gymkahna, IIT Bombay</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Student activities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Office Bearers</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Complaint management system</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Network troubleshooting</a>
+            <a class="dropdown-item" href="#">Webmail to gmail without forwarding</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">MLC</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container intro">
+    <div class="info">
+      <p>
+        The Students’ Gymkhana along with its infrastructure is an organization to foster and develop all student
+        activities
+        in the Institute. It aims at promoting and developing organizational abilities in students. It has been
+        successful
+        over the years in evolving a well-informed, articulate and participatory student community life. It has been
+        instrumental in identifying student issues and promoting discussion on them. It functions as the office for all
+        election and nominations of students for gymkhana activities.
+      </p>
+      <p>
+
+        The official year for all working shall be from
+        the
+        first day of April to the thirty-first day of March of the ensuing Calendar Year.
+        This is also the period during which student officials of the Gymkhana
+        hold tenure.
+      </p>
+
+      <div class="address">
+        Students' Gymkhana,
+        <br>
+        Indian Institute of Technology Bombay,
+        <br>
+        Powai, Mumbai 400076,
+        <br>
+        India
+        <br>
+        Contact: +91-22-25768968
+      </div>
+      <!-- website made by mlc note (href to mlc website) -->
+      <!-- add a link to video of gpo on gmail -->
+    </div>
+    <br><br>
+    <div>
+      <p id="bodiesText">
+        <!-- append this too to maintain consistency in case js is turned off. -->
+      </p>
+
+      <div id="gymkhanaBodies">
+        <!-- append using Jquery -->
+      </div>
+
+    </div>
+  </div>
+  <footer id="footer">
+    <!-- <div class="">
+      © 2020 <a href="http://gymkhana.iitb.ac.in/" target="_blank">Gymkhana, IIT Bombay</a>
+    </div> -->
+    <div>
+      Made by <a href="https://nautatva.github.io/"> Nautatava Navlakha </a>
+    </div>
+    <br>
+    <div>
+      <div class="no-margin">
+        Other Links:
+      </div>
+      <div class="no-margin">
+        <a href="">Source Code</a>
+      </div>
+      <div class="no-margin">
+        <a href="">Bugs/Suggestions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  $.getJSON('bodies.json', function(bodies){
+    $("#bodiesText").append("Student bodies under gymkhana:")
+    for (let i = 0; i < bodies.length; i++)
+      {
+        const body = bodies[i];
+        $("#gymkhanaBodies").append(
+          `<a class="gymkhanaBody" href="${body.url}">
+              <div class="gymkhanaBodyImage">
+                <img src="assets/logo/${body.image}">
+              </div>
+              <p> ${body.name} </p>
+            </a>`);
+      }
+  });
+</script>
+
+</html>

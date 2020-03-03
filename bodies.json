@@ -1,0 +1,27 @@
+[
+  {
+    "name": "IIT Bombay Hostel affairs",
+    "image": "iitb_logo.png",
+    "url": "http://gymkhana.iitb.ac.in/hostels/"
+  },
+  {
+    "name": "IIT Bombay Academics (UG)",
+    "image": "UG_acads.png",
+    "url": "http://gymkhana.iitb.ac.in/~ugacademics/"
+  },
+  {
+    "name": "IIT Bombay Academics (PG)",
+    "image": "PG_acads.png",
+    "url": "http://gymkhana.iitb.ac.in/~pgacademics/"
+  },
+  {
+    "name": "IIT Bombay Sports",
+    "image": "PG_acads.png",
+    "url": "http://gymkhana.iitb.ac.in/~sports/"
+  },
+  {
+    "name": "IIT Bombay Culturals",
+    "image": "PG_acads.png",
+    "url": "http://gymkhana.iitb.ac.in/~cultural/"
+  }
+]
