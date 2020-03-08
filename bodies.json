@@ -23,5 +23,46 @@
     "name": "IIT Bombay Culturals",
     "image": "PG_acads.png",
     "url": "http://gymkhana.iitb.ac.in/~cultural/"
+  },
+  {
+    "name": "SARC",
+    "image": "sarc.png",
+    "url": "https://sarc-iitb.org/"
+  },
+  {
+    "name": "E-Cell",
+    "image": "ecell.png",
+    "url": "https://www.ecell.in/"
+  },
+  {
+    "name": "Mood Indigo",
+    "image": "moodi.png",
+    "url": "https://moodi.org/"
+  },
+  {
+    "name": "Techfest",
+    "image": "techfest.png",
+    "url": "https://techfest.org/"
+  },
+  {
+    "name": "Tech@IITB",
+    "image": "techiitb.png",
+    "url": "https://www.tech-iitb.org/"
+  },
+  
+  {
+    "name": "Insight",
+    "image": "insight.png",
+    "url": "https://www.insightiitb.org/"
+  },
+  {
+    "name": "NSS",
+    "image": "nss.png",
+    "url": "gymkhana.iitb.ac.in/~nss/"
+  },
+  {
+    "name": "Abhyuday",
+    "image": "abhyuday.png",
+    "url": "http://www.abhyudayiitb.org/"
   }
 ]
