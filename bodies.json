@@ -6,23 +6,24 @@
   },
   {
     "name": "IIT Bombay Academics (UG)",
-    "image": "UG_acads.png",
-    "url": "http://gymkhana.iitb.ac.in/~ugacademics/"
+    "image": "ugacads.png",
+    "url": "http://gymkhana.iitb.ac.in/~ugacademics/",
+    "invert": 0
   },
   {
     "name": "IIT Bombay Academics (PG)",
-    "image": "PG_acads.png",
+    "image": "pgacads.png",
     "url": "http://gymkhana.iitb.ac.in/~pgacademics/",
     "invert": 0
   },
   {
     "name": "IIT Bombay Sports",
-    "image": "PG_acads.png",
+    "image": "sports.png",
     "url": "http://gymkhana.iitb.ac.in/~sports/"
   },
   {
     "name": "IIT Bombay Culturals",
-    "image": "PG_acads.png",
+    "image": "culturals.png",
     "url": "http://gymkhana.iitb.ac.in/~cultural/",
     "invert": 0
   },
@@ -43,7 +44,7 @@
   },
   {
     "name": "Mood Indigo",
-    "image": "moodi.png",
+    "image": "moodi.svg",
     "url": "https://moodi.org/"
   },
   {
@@ -54,7 +55,8 @@
   {
     "name": "Insight",
     "image": "insight.png",
-    "url": "https://www.insightiitb.org/"
+    "url": "https://www.insightiitb.org/",
+    "invert": 0
   },
   {
     "name": "NSS",
