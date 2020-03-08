@@ -44,7 +44,8 @@ p {
   color: #212529;
 }
 .gymkhanaBodyImage {
-  width: 100px;
+  width: 100px; /* Flex will reduce the given 100px */
+  max-width: 60px;
   text-align: center;
 }
 .gymkhanaBody img{
