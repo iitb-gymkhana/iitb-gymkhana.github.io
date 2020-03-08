@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gymkhana, IITB - local</title>
+  <title>Gymkhana, IITB</title>
 
   <!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="assets/index.css" />
+  <link rel="stylesheet" href="assets/footer.css" />
 
-  <script src="jquery-3.4.1.min.js"></script>
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-  <script src="bootstrap/bootstrap.min.js"></script>
+  <script src="assets/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+  <script src="assets/bootstrap/bootstrap.min.js"></script>
 
 </head>
 
@@ -20,7 +20,7 @@
 
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">Gymkahna, IIT Bombay</a>
+    <a class="navbar-brand" href="/">Gymkahna, IIT Bombay</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,10 +32,10 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Student activities</a>
+          <a class="nav-link" href="SAC-Constitution-March-2018.pdf">SAC Constitution</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Office Bearers</a>
+          <a class="nav-link" href="prev.htm">Office Bearers</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#">Complaint management system</a>
@@ -46,7 +46,8 @@
             Resources
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="ftp://ftp.iitb.ac.in/NetworkConnectivityChecker.zip">Network troubleshooting</a>
+            <a class="dropdown-item" href="languide.pdf">Network troubleshooting guide</a>
+            <a class="dropdown-item" href="ftp://ftp.iitb.ac.in/NetworkConnectivityChecker.zip">Automated network troubleshooting</a>
             <a class="dropdown-item" href="https://gymkhana.iitb.ac.in/~mlc/LDAP_to_gmail.mp4">Webmail to gmail without forwarding</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="https://gymkhana.iitb.ac.in/~mlc/">MLC</a>
@@ -160,7 +161,7 @@
           $("#gymkhanaBodies").append(
             `<a class="gymkhanaBody" href="${body.url}">
                 <div class="gymkhanaBodyImage">
-                  <img src="assets/logo/${body.image}">
+                  <img src="assets/logo/${body.image}" style="filter: invert(${body.invert});">
                 </div>
                 <p> ${body.name} </p>
               </a>`);

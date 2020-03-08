@@ -51,7 +51,6 @@ p {
 .gymkhanaBody img{
   width: 100%;
   height: auto;
-  filter: invert(1);
 }
 .gymkhanaBody p{
   margin: 0rem;

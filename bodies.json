@@ -12,7 +12,8 @@
   {
     "name": "IIT Bombay Academics (PG)",
     "image": "PG_acads.png",
-    "url": "http://gymkhana.iitb.ac.in/~pgacademics/"
+    "url": "http://gymkhana.iitb.ac.in/~pgacademics/",
+    "invert": 0
   },
   {
     "name": "IIT Bombay Sports",
@@ -22,7 +23,13 @@
   {
     "name": "IIT Bombay Culturals",
     "image": "PG_acads.png",
-    "url": "http://gymkhana.iitb.ac.in/~cultural/"
+    "url": "http://gymkhana.iitb.ac.in/~cultural/",
+    "invert": 0
+  },
+  {
+    "name": "Tech@IITB",
+    "image": "techiitb.png",
+    "url": "https://www.tech-iitb.org/"
   },
   {
     "name": "SARC",
@@ -45,12 +52,6 @@
     "url": "https://techfest.org/"
   },
   {
-    "name": "Tech@IITB",
-    "image": "techiitb.png",
-    "url": "https://www.tech-iitb.org/"
-  },
-  
-  {
     "name": "Insight",
     "image": "insight.png",
     "url": "https://www.insightiitb.org/"
@@ -58,7 +59,8 @@
   {
     "name": "NSS",
     "image": "nss.png",
-    "url": "gymkhana.iitb.ac.in/~nss/"
+    "url": "gymkhana.iitb.ac.in/~nss/",
+    "invert": 0
   },
   {
     "name": "Abhyuday",
