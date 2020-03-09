@@ -1,8 +1,17 @@
+/* 
+--color-light-alpha: rgba(255, 255, 255, 0.9);
+--color-dark-opaque: rgba(0, 0, 0, 0.1);
+
+--border-color: var(--color-dark-opaque);
+--border-color: var(--color-light-alpha);
+--footer-color: #e8c292;
+*/
+
 footer{
   text-align: center;
   padding-top: 40px;
   margin: 40px;
-  border-top: 1px solid #eee
+  border-top: 1px solid var(--border-color);
 }
 
 .no-margin {
@@ -10,11 +19,5 @@ footer{
 }
 
 footer a {
-  color: #23527c;
-}
-
-@media (prefers-color-scheme: dark) {
-  footer a {
-    color:#c5cdd5;
-  }
+  color: var(--footer-color);
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,12 +7,10 @@
   <title>Gymkhana, IITB</title>
 
   <link rel="stylesheet" href="assets/index.css" />
-  <link rel="stylesheet" href="assets/dark_mode.css" />
   <link rel="stylesheet" href="assets/navbar.css" />
   <link rel="stylesheet" href="assets/footer.css" />
 
   <script src="assets/jquery-3.4.1.min.js"></script>
-  <script src="assets/navbar.js"></script>
 </head>
 
 <body>
@@ -96,9 +94,9 @@
       <!-- add a link to video of gpo on gmail -->
     </div>
 
-    <div>
+    <div class="studentBodies">
       <p id="bodiesText">
-        <!-- append this too to maintain consistency in case js is turned off. -->
+        Student bodies under gymkhana:
       </p>
 
       <div id="gymkhanaBodies">
@@ -127,7 +125,19 @@
       </div>
     </div>
   </footer>
+
+  <div class="user-toggle">
+    <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
+    <button class="[ toggle-button ] [ js-mode-toggle ]">
+      <span class="[ toggle-button__text ] [ js-mode-toggle-text ]">Enable JavaScript</span>
+      <span class="toggle-button__icon" aria-hidden="true"></span>
+    </button>
+  </div>
+
+
 </body>
+<script src="assets/navbar.js"></script>
+<script src="assets/color-switch.js"></script>
 <script>
   const loadJSON = (callback) => {
     let xobj = new XMLHttpRequest();
@@ -150,9 +160,6 @@
       // Parse JSON string into object
       bodies = JSON.parse(response);
 
-      if (bodies.length) {
-        $("#bodiesText").append("Student bodies under gymkhana:")
-      }
       for (let i = 0; i < bodies.length; i++) {
         const body = bodies[i];
         let image = new XMLHttpRequest();
