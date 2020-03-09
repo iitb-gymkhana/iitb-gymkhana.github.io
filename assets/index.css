@@ -1,5 +1,4 @@
 body {
-  color: #212529;
   flex-direction: column;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   margin: 0;
@@ -9,6 +8,7 @@ body {
   text-align: left;
   line-height: 1.5;
   box-sizing: border-box;
+  color: #212529;
 }
 
 p {
@@ -75,15 +75,15 @@ p {
   text-decoration: none;
 }
 .gymkhanaBody:hover{
-  background-color: #f8f9fa;
   text-decoration: none;
+  background-color: #f8f9fa;
 }
 
 .gymkhanaBody p{
-  color: #212529;
   width: 100%;
   margin: 0rem;
   margin-left: 0.5rem;
+  color: #212529;
 }
 .gymkhanaBodyImage {
   width: 100px; /* Flex will reduce the given 100px */

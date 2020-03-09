@@ -7,8 +7,8 @@ nav{
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
   text-align: left;
+  color: #212529;
 }
 nav ul{
   margin-right: auto;
@@ -29,7 +29,6 @@ nav li{
   line-height: 1.5;
 }
 nav a{
-  color: rgba(0,0,0,.8);
   text-decoration: none;
 }
 .navbar-brand{
@@ -46,6 +45,7 @@ nav a{
   display: flex;
   flex-direction: row;
 }
+
 .active{
   color: rgba(0,0,0,.9) !important;
 }
@@ -95,9 +95,32 @@ nav a{
   background-color: transparent;
   border: 0;
 }
+
+.dropdown-item:hover {
+  background-color: #21252921;
+}
+
 .dropdown-divider {
   height: 0;
   margin: .5rem 0;
   overflow: hidden;
   border-top: 1px solid#e9ecef;
+}
+
+@media (prefers-color-scheme: dark) {
+  nav{
+    color: whitesmoke;
+  }
+  .navbar-brand{
+  color: rgba(255,255,255,.9);
+  }
+  .active{
+    color: rgba(255,255,255,.9) !important;
+  }
+  .nav-link{
+    color: rgba(255,255,255,.4);
+  }
+  .partial ,.nav-link:hover{
+    color: rgba(255,255,255,.8);
+  }
 }
