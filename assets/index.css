@@ -156,10 +156,11 @@ p {
   background-color: var(--highlighter);
 }
 
-.gymkhanaBody p{
+.gymkhanaBody h4{
   width: 100%;
   margin: 0rem;
   margin-left: 0.5rem;
+  font-weight: 400;
   color: var(--text-color);
 }
 .gymkhanaBodyImage {
@@ -171,6 +172,40 @@ p {
   width: 100%;
   height: auto;
   filter: invert(var(--invert));
+}
+
+/* Office Bearers */
+#gsecs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+@media(min-width:1200px){
+  .block{
+    flex: 0 0 47%;
+  }
+}
+.block{
+  margin: 1rem;
+}
+.part{
+  display: flex;
+}
+.year{
+  margin: 0rem;
+}
+.post{
+  padding-left: 0.5rem;
+  text-align: left;
+}
+.name{
+  text-align: right;
+}
+.post, .name{
+  display: inline-block;
+  margin: 0.25rem;
 }
 
 /* Custom dark mode style */

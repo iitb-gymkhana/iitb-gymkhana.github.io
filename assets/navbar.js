@@ -11,7 +11,7 @@
     // Clicking away from dropdown will remove the dropdown class
     $('html').click(function () {
       $('.nav-dropdown').hide();
-      $("#navbarDropdownButton").toggleClass("partial");
+      $("#navbarDropdownButton").removeClass("partial");
     });
   }); // end DOM ready
 })(jQuery); // end jQuery

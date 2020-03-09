@@ -57,7 +57,6 @@ const toggleSetting = () => {
 
 modeToggleButton.addEventListener('click', evt => {
   evt.preventDefault();
-
   applySetting(toggleSetting());
 });
 

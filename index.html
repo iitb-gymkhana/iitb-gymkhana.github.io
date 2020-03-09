@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
   <!-- Fixed navbar -->
   <nav>
     <a class="navbar-brand" href="/">Gymkhana, IIT Bombay</a>
@@ -22,13 +21,13 @@
     <div>
       <ul id="right">
         <li>
-          <a class="nav-link active" href="/">Home</a>
+          <a id="intro" class="nav-link active" href="/">Home</a>
         </li>
         <li>
-          <a class="nav-link" href="SAC-Constitution-March-2018.pdf">SAC Constitution</a>
+          <a id="constitution" class="nav-link" href="SAC-Constitution-March-2018.pdf">SAC Constitution</a>
         </li>
         <li>
-          <a class="nav-link" href="prev.htm">Office Bearers</a>
+          <a id="OfficeBearers" class="nav-link" onclick="loadBody('prev')" href="#prev">Office Bearers</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#">Complaint management system</a>
@@ -37,6 +36,9 @@
           <a class="nav-link" href="javascript:void(0)" id="navbarDropdownButton" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Resources
+            <!-- <i class="fontello-icon icon-down-dir">&#xe800;</i> -->
+            <!-- <span class="down"> &#9660; </span> -->
+            <!-- <img src="down1.svg"> -->
           </a>
           <ul class="nav-dropdown" aria-labelledby="navbarDropdownButton">
             <a class="dropdown-item" href="languide.pdf">
@@ -100,11 +102,18 @@
       </p>
 
       <div id="gymkhanaBodies">
-        <!-- append using Jquery -->
+        <!-- append using JQuery -->
       </div>
 
     </div>
   </div>
+
+  <div class="container OfficeBearers">
+    <div id="gsecs">
+      <!-- append using JQuery -->
+    </div>
+  </div>
+
   <footer id="footer">
     <!-- <div class="">
       © 2020 <a href="http://gymkhana.iitb.ac.in/" target="_blank">Gymkhana, IIT Bombay</a>
@@ -129,7 +138,7 @@
   <div class="user-toggle">
     <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
     <button class="[ toggle-button ] [ js-mode-toggle ]">
-      <span class="[ toggle-button__text ] [ js-mode-toggle-text ]">Enable JavaScript</span>
+      <span class="[ toggle-button__text ] [ js-mode-toggle-text ]"> Change </span>
       <span class="toggle-button__icon" aria-hidden="true"></span>
     </button>
   </div>
@@ -139,47 +148,72 @@
 <script src="assets/navbar.js"></script>
 <script src="assets/color-switch.js"></script>
 <script>
-  const loadJSON = (callback) => {
+  const loadJSON = (callback, json) => {
+    // Gets the contents of json and calls back the given function
     let xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
 
-    xobj.open('GET', 'bodies.json', true);
+    xobj.open('GET', json, true);
     // Replace 'my_data' with the path to your file
     xobj.onreadystatechange = () => {
       if (xobj.readyState === 4 && xobj.status === 200) {
         // Required use of an anonymous callback 
         // as .open() will NOT return a value but simply returns undefined in asynchronous mode
-        callback(xobj.responseText);
+        // Parse JSON string into object and callback the function
+        callback(JSON.parse(xobj.responseText));
       }
     };
     xobj.send(null);
   }
 
-  const bodie = () => {
-    loadJSON((response) => {
-      // Parse JSON string into object
-      bodies = JSON.parse(response);
+  const loadBody = (hash) => {
+    // Given the hash, decides which part of the body to be displayed
+    if (hash === 'prev') {
+      $(".intro").hide();
+      $(".OfficeBearers").show();
+      $("#intro").removeClass("active");
+      $("#OfficeBearers").addClass("active");
 
-      for (let i = 0; i < bodies.length; i++) {
-        const body = bodies[i];
-        let image = new XMLHttpRequest();
-
-        image.open('HEAD', `assets/logo/${body.image}`, false);
-        image.send();
-        if (image.status != 404) {
-          $("#gymkhanaBodies").append(
-            `<a class="gymkhanaBody" href="${body.url}">
-                <div class="gymkhanaBodyImage">
-                  <img src="assets/logo/${body.image}" style="filter: invert(${body.invert});">
-                </div>
-                <p> ${body.name} </p>
-              </a>`);
+      loadJSON((response) => {
+        let html = '';
+        for (let i in response) {
+          const working = response[i];
+          const gsecs = working.posts;
+          html += `<div class="block"><h4 class="year">${working.year}</h4>`;
+          for (let post in gsecs) {
+            html += `<div class="part"><p class="post">${post}:  </p><h5 class=name> ${gsecs[post]} </h5></div>`;
+          }
+          html += "</div>";
         }
-      };
-    });
+        console.log(html);
+        $("#gsecs").append(html);
+      }, 'gsecs.json');
+    }
+
+    else {
+      // const bodie = () => {
+      loadJSON(((response) => {
+        for (let i = 0; i < response.length; i++) {
+          const body = response[i];
+          let image = new XMLHttpRequest();
+
+          image.open('HEAD', `assets/logo/${body.image}`, false);
+          image.send();
+          if (image.status != 404) {
+            $("#gymkhanaBodies").append(
+              `<a class="gymkhanaBody" href="${body.url}">
+                  <div class="gymkhanaBodyImage">
+                    <img src="assets/logo/${body.image}" style="filter: invert(${body.invert});">
+                  </div>
+                  <h4> ${body.name} </h4>
+                </a>`);
+          }
+        };
+      }), 'bodies.json');
+    }
   }
 
-  bodie()
+  loadBody(location.hash.substr(1));
 </script>
 
 </html>
