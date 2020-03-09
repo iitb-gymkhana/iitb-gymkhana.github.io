@@ -8,50 +8,53 @@
 
   <!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
   <link rel="stylesheet" href="assets/index.css" />
+  <link rel="stylesheet" href="assets/navbar.css" />
   <link rel="stylesheet" href="assets/footer.css" />
 
   <script src="assets/jquery-3.4.1.min.js"></script>
-  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-  <script src="assets/bootstrap/bootstrap.min.js"></script>
-
+  <script src="assets/navbar.js"></script>
 </head>
 
 <body>
 
   <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="/">Gymkahna, IIT Bombay</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav>
+    <a class="navbar-brand" href="/">Gymkhana, IIT Bombay</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+    <div>
+      <ul id="right">
+        <li>
+          <a class="nav-link active" href="/">Home</a>
         </li>
-        <li class="nav-item">
+        <li>
           <a class="nav-link" href="SAC-Constitution-March-2018.pdf">SAC Constitution</a>
         </li>
-        <li class="nav-item">
+        <li>
           <a class="nav-link" href="prev.htm">Office Bearers</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#">Complaint management system</a>
         </li> -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        <li>
+          <a class="nav-link" href="javascript:void(0)" id="navbarDropdownButton" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            Resources
+            Resources 🔽
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="languide.pdf">Network troubleshooting guide</a>
-            <a class="dropdown-item" href="ftp://ftp.iitb.ac.in/NetworkConnectivityChecker.zip">Automated network troubleshooting</a>
-            <a class="dropdown-item" href="https://gymkhana.iitb.ac.in/~mlc/LDAP_to_gmail.mp4">Webmail to gmail without forwarding</a>
+          <ul class="nav-dropdown" aria-labelledby="navbarDropdownButton">
+            <a class="dropdown-item" href="languide.pdf">
+              <li>Network troubleshooting guide</li>
+            </a>
+            <a class="dropdown-item" href="ftp://ftp.iitb.ac.in/NetworkConnectivityChecker.zip">
+              <li>Automated network troubleshooting</li>
+            </a>
+            <a class="dropdown-item" href="https://gymkhana.iitb.ac.in/~mlc/LDAP_to_gmail.mp4">
+              <li>Webmail to gmail without forwarding</li>
+            </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://gymkhana.iitb.ac.in/~mlc/">MLC</a>
-          </div>
+            <a class="dropdown-item" href="https://gymkhana.iitb.ac.in/~mlc/">
+              <li>MLC</li>
+            </a>
+          </ul>
         </li>
       </ul>
     </div>
@@ -92,7 +95,7 @@
       <!-- website made by mlc note (href to mlc website) -->
       <!-- add a link to video of gpo on gmail -->
     </div>
-    <br><br>
+
     <div>
       <p id="bodiesText">
         <!-- append this too to maintain consistency in case js is turned off. -->
@@ -113,13 +116,13 @@
     </div>
     <br>
     <div>
-      <div class="no-margin">
+      <div>
         Other Links:
       </div>
-      <div class="no-margin">
+      <div>
         <a href="https://github.com/nautatva/gymkhana_website">Source Code</a>
       </div>
-      <div class="no-margin">
+      <div>
         <a href="https://github.com/nautatva/gymkhana_website/issues">Bugs/Suggestions</a>
       </div>
     </div>
@@ -129,15 +132,15 @@
   const loadJSON = (callback) => {
     let xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    
+
     xobj.open('GET', 'bodies.json', true);
     // Replace 'my_data' with the path to your file
     xobj.onreadystatechange = () => {
-        if (xobj.readyState === 4 && xobj.status === 200) {
-            // Required use of an anonymous callback 
-            // as .open() will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-        }
+      if (xobj.readyState === 4 && xobj.status === 200) {
+        // Required use of an anonymous callback 
+        // as .open() will NOT return a value but simply returns undefined in asynchronous mode
+        callback(xobj.responseText);
+      }
     };
     xobj.send(null);
   }
@@ -148,10 +151,9 @@
       bodies = JSON.parse(response);
 
       if (bodies.length) {
-        $("#bodiesText").append("Student bodies under gymkhana:")  
-      } 
-      for (let i = 0; i < bodies.length; i++)
-      {
+        $("#bodiesText").append("Student bodies under gymkhana:")
+      }
+      for (let i = 0; i < bodies.length; i++) {
         const body = bodies[i];
         let image = new XMLHttpRequest();
 

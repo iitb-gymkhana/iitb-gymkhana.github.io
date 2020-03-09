@@ -1,9 +1,7 @@
-/* Basic styling */
 body {
-  color: #5e5e5e;
-  /* display: flex; */
+  color: #212529;
   flex-direction: column;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -18,22 +16,63 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Bootstrap Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 100%; */
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 510px;
+  }
+}
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 690px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 930px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1110px;
+  }
+}
+
+/* Custom body */
 .intro{
   padding: 2rem;
+}
+.info{
+  margin-bottom: 3rem;
 }
 #gymkhanaBodies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .gymkhanaBody {
   display: flex;
   flex-direction: row;
-  width: 220px;
+  width: 188px;
   padding: 1rem;
   align-items: center;
+  text-decoration: none;
 }
 .gymkhanaBody:hover{
   background-color: #f8f9fa;
@@ -42,6 +81,9 @@ p {
 
 .gymkhanaBody p{
   color: #212529;
+  width: 100%;
+  margin: 0rem;
+  margin-left: 0.5rem;
 }
 .gymkhanaBodyImage {
   width: 100px; /* Flex will reduce the given 100px */
@@ -51,8 +93,4 @@ p {
 .gymkhanaBody img{
   width: 100%;
   height: auto;
-}
-.gymkhanaBody p{
-  margin: 0rem;
-  margin-left: 0.5rem;
 }
