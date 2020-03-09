@@ -19,8 +19,6 @@ const getCSSCustomProp = propKey => {
 
 // The following function is not working as expected
 const setButtonLabelAndStatus = currentSetting => {
-  console.log(currentSetting)
-  console.log(currentSetting === 'dark');
   modeToggleText.innerText = `Enable ${currentSetting === 'dark' ? 'light' : 'dark'} mode`;
   modeStatusElement.innerText = `Color mode is now ${currentSetting}`;
 };
