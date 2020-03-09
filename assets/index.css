@@ -179,12 +179,17 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: 3rem;
 }
 @media(min-width:1200px){
   .block{
     flex: 0 0 47%;
+  }
+}
+@media(max-width: 460px){
+  .post{
+    width: 66%;
+    min-width: 10px !important;
   }
 }
 .block{
@@ -199,6 +204,7 @@ p {
 .post{
   padding-left: 0.5rem;
   text-align: left;
+  min-width: 300px;
 }
 .name{
   text-align: right;
