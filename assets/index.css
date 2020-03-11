@@ -208,10 +208,12 @@ p {
 }
 .name{
   text-align: right;
+  font-weight: bold;
 }
 .post, .name{
   display: inline-block;
   margin: 0.25rem;
+  white-space: nowrap;
 }
 
 /* Custom dark mode style */
