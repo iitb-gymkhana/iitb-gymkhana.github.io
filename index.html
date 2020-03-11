@@ -201,19 +201,13 @@
 
         for (let i = 0; i < response.length; i++) {
           const body = response[i];
-          let image = new XMLHttpRequest();
-
-          image.open('HEAD', `assets/logo/${body.image}`, false);
-          image.send();
-          if (image.status != 404) {
-            $("#gymkhanaBodies").append(
-              `<a class="gymkhanaBody" href="${body.url}">
-                  <div class="gymkhanaBodyImage">
-                    <img src="assets/logo/${body.image}" style="filter: invert(${body.invert});">
-                  </div>
-                  <h4> ${body.name} </h4>
-                </a>`);
-          }
+          $("#gymkhanaBodies").append(
+            `<a class="gymkhanaBody" href="${body.url}">
+                <div class="gymkhanaBodyImage">
+                  <img src="assets/logo/${body.image}" style="filter: invert(${body.invert});">
+                </div>
+                <h4> ${body.name} </h4>
+             </a>`);
         };
       }), 'bodies.json');
     }
