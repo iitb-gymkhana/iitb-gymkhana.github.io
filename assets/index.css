@@ -96,6 +96,11 @@ p {
   margin-bottom: 1rem;
 }
 
+.normal-text{
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 /* Bootstrap Container */
 .container {
   display: flex;
