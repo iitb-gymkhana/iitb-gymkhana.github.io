@@ -22,6 +22,7 @@
   --text-color-out-of-focus: var(--color-dark-inactive);
   --highlighter: var(--color-dark-opaque);
   --invert: 0;
+  --inverted: 0;
 
   --button-icon: var(--icon-moon);
   --button-icon-filter: var(--icon-moon-filter);
@@ -50,6 +51,7 @@
     --button-color: var(--color-dark);
     --border-color: var(--color-light-alpha);
     --invert: 0.8;
+	--inverted: 1;
 
     --footer-color: #e8c292;
   }
@@ -68,6 +70,7 @@
   --button-color: var(--color-dark);
   --border-color: var(--color-light-alpha);
   --invert: 0.8;
+  --inverted: 1;
   
   --footer-color: #e8c292;
 }
@@ -171,7 +174,7 @@ p {
 .gymkhanaBody img{
   width: 100%;
   height: auto;
-  filter: saturate(0) invert(var(--invert));
+  filter: saturate(calc(1 - var(--inverted))) invert(var(--invert));
 }
 .gymkhanaBody:hover img.colored {
 	filter: none;
