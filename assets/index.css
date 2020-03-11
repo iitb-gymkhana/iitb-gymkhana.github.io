@@ -155,9 +155,7 @@ iframe{
 .address {
   position: relative;
   display: inline-block;
-  
 }
-
 .address .mapPopUp {
   visibility: hidden;
   width: 120px;
@@ -174,9 +172,15 @@ iframe{
   left: 50%;
   margin-left: -60px;
 }
-
 .address:hover .mapPopUp {
   visibility: visible;
+}
+
+@media(max-width: 800px){
+  .mapPopUp, .mapPopUp iframe{ 
+    display :none;
+    visibility: hidden;
+  }
 }
 
 #gymkhanaBodies {
