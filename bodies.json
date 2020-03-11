@@ -8,13 +8,13 @@
     "name": "IIT Bombay Academics (UG)",
     "image": "ugacads.png",
     "url": "http://gymkhana.iitb.ac.in/~ugacademics/",
-    "invert": 0
+    "colored": 1
   },
   {
     "name": "IIT Bombay Academics (PG)",
     "image": "pgacads.png",
     "url": "http://gymkhana.iitb.ac.in/~pgacademics/",
-    "invert": 0
+    "colored": 1
   },
   {
     "name": "IIT Bombay Sports",
@@ -25,7 +25,7 @@
     "name": "IIT Bombay Culturals",
     "image": "culturals.png",
     "url": "http://gymkhana.iitb.ac.in/~cultural/",
-    "invert": 0
+    "colored": 1
   },
   {
     "name": "Tech@IITB",
@@ -56,13 +56,13 @@
     "name": "Insight",
     "image": "insight.png",
     "url": "https://www.insightiitb.org/",
-    "invert": 0
+    "colored": 1
   },
   {
     "name": "NSS",
     "image": "nss.png",
     "url": "https://gymkhana.iitb.ac.in/~nss/",
-    "invert": 0
+    "colored": 1
   },
   {
     "name": "Abhyuday",

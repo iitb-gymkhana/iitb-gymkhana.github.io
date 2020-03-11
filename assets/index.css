@@ -171,7 +171,10 @@ p {
 .gymkhanaBody img{
   width: 100%;
   height: auto;
-  filter: invert(var(--invert));
+  filter: saturate(0) invert(var(--invert));
+}
+.gymkhanaBody:hover img.colored {
+	filter: none;
 }
 
 /* Office Bearers */

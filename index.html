@@ -203,7 +203,7 @@
           $("#gymkhanaBodies").append(
             `<a class="gymkhanaBody" href="${body.url}">
                 <div class="gymkhanaBodyImage">
-                  <img src="assets/logo/${body.image}" style="filter: invert(${body.invert});">
+                  <img src="assets/logo/${body.image}" class="${body.colored ? 'colored' : ''}">
                 </div>
                 <h4> ${body.name} </h4>
              </a>`);
