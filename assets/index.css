@@ -186,10 +186,10 @@ p {
     flex: 0 0 47%;
   }
 }
-@media(max-width: 460px){
+@media(max-width: 600px){
   .post{
-    width: 66%;
     min-width: 10px !important;
+    padding-left: 0.1rem !important;
   }
 }
 .block{
@@ -207,13 +207,11 @@ p {
   min-width: 300px;
 }
 .name{
-  text-align: right;
   font-weight: bold;
 }
 .post, .name{
   display: inline-block;
-  margin: 0.25rem;
-  white-space: nowrap;
+  margin:  0.1rem 0.25rem;
 }
 
 /* Custom dark mode style */

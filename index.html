@@ -180,10 +180,11 @@
           const working = response[i];
           const gsecs = working.posts;
           html += `<div class="block"><h4 class="year">${working.year}</h4>`;
+          html += `<table>`;
           for (let post in gsecs) {
-            html += `<div class="part"><p class="post">${post}:  </p><span class=name> ${gsecs[post]} </span></div>`;
+            html += `<tr><td class=post>${post}:</td> <td class=gsec><span class=name> ${gsecs[post]} </span></td></tr>`;
           }
-          html += "</div>";
+          html += "</table></div>";
         }
         console.log(html);
         $("#gsecs").append(html);
