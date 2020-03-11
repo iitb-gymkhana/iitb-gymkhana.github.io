@@ -152,13 +152,13 @@ iframe{
 }
 
 /* Map */
-.map {
+.address {
   position: relative;
   display: inline-block;
   
 }
 
-.map .mapPopUp {
+.address .mapPopUp {
   visibility: hidden;
   width: 120px;
   /* background-color: black; */
@@ -175,7 +175,7 @@ iframe{
   margin-left: -60px;
 }
 
-.map:hover .mapPopUp {
+.address:hover .mapPopUp {
   visibility: visible;
 }
 
