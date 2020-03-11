@@ -21,7 +21,7 @@
     <div>
       <ul id="right">
         <li>
-          <a id="intro" class="nav-link active" href="/">Home</a>
+          <a id="intro" class="nav-link active" onclick="loadBody('')" href="#">Home</a>
         </li>
         <li>
           <a id="constitution" class="nav-link" href="SAC-Constitution-March-2018.pdf">SAC Constitution</a>
@@ -119,19 +119,9 @@
       © 2020 <a href="http://gymkhana.iitb.ac.in/" target="_blank">Gymkhana, IIT Bombay</a>
     </div> -->
     <div>
-      Made by <a href="https://nautatva.github.io/" onclick="document.getElementById('toggle').style.display = 'block';" target="_blank"> Nautatava Navlakha </a>
-    </div>
-    <br>
-    <div>
-      <div>
-        Other Links:
-      </div>
-      <div>
-        <a href="https://github.com/nautatva/gymkhana_website">Source Code</a>
-      </div>
-      <div>
-        <a href="https://github.com/nautatva/gymkhana_website/issues">Bugs/Suggestions</a>
-      </div>
+      &copy; Gymkhana IIT Bombay &bull; 
+      <a href="https://github.com/nautatva/gymkhana_website">Source Code</a> &bull;
+      <a href="https://nautatva.github.io/" onclick="document.getElementById('toggle').style.display = 'block';" target="_blank"> Nautatava Navlakha </a>
     </div>
   </footer>
 
@@ -166,6 +156,9 @@
     xobj.send(null);
   }
 
+  var prevLoaded = false;
+  var bodiesLoaded = false;
+
   const loadBody = (hash) => {
     // Given the hash, decides which part of the body to be displayed
     if (hash === 'prev') {
@@ -174,7 +167,11 @@
       $("#intro").removeClass("active");
       $("#OfficeBearers").addClass("active");
 
+      if (prevLoaded) return;
+
       loadJSON((response) => {
+        prevLoaded = true;
+
         let html = '';
         for (let i in response) {
           const working = response[i];
@@ -192,8 +189,16 @@
     }
 
     else {
-      // const bodie = () => {
+      $(".intro").show();
+      $(".OfficeBearers").hide();
+      $("#intro").addClass("active");
+      $("#OfficeBearers").removeClass("active");
+
+      if (bodiesLoaded) return;
+
       loadJSON(((response) => {
+        bodiesLoaded = true;
+
         for (let i = 0; i < response.length; i++) {
           const body = response[i];
           let image = new XMLHttpRequest();
