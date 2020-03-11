@@ -96,6 +96,11 @@ p {
   margin-bottom: 1rem;
 }
 
+iframe{
+  border: 0.05rem solid black;
+  border-radius: 0.5rem;
+}
+
 .normal-text{
   color: var(--text-color);
   text-decoration: none;
@@ -145,6 +150,35 @@ p {
 .info{
   margin-bottom: 3rem;
 }
+
+/* Map */
+.map {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.map .mapPopUp {
+  visibility: hidden;
+  width: 120px;
+  /* background-color: black; */
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.map:hover .mapPopUp {
+  visibility: visible;
+}
+
 #gymkhanaBodies {
   display: flex;
   flex-direction: row;
