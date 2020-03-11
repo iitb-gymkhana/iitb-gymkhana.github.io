@@ -262,3 +262,14 @@ p {
   outline: 1px solid var(--button-background);
   outline-offset: 0.5rem;
 }
+
+@media(max-width: 600px){
+  .gymkhanaBody {
+    width: 100%;
+  }
+  .gymkhanaBodyImage {
+    max-width: 100px;
+    width: 90px;
+    margin-right: 15px;
+  }        
+}
