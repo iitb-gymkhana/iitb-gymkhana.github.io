@@ -53,6 +53,11 @@
     "url": "https://techfest.org/"
   },
   {
+    "name": "Bandhu",
+    "image": "bandhu.png",
+    "url": "https://www.iitb-bandhu.com/"
+  },
+  {
     "name": "Insight",
     "image": "insight.png",
     "url": "https://www.insightiitb.org/",
@@ -70,3 +75,4 @@
     "url": "http://www.abhyudayiitb.org/"
   }
 ]
+  
