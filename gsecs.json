@@ -2,6 +2,28 @@
   {
     "year": "Current Year",
     "posts": {
+      "General Secretary Hostel Affairs": "Saket Mohta",
+      "General Secretary Academic Affairs (PG)": "Krishn Raj",
+      "General Secretary Academic Affairs (UG)": "Hrishikesh Bavishkar",
+      "General Secretary Cultural Affairs": "Jishnu K Ramakrishnan",
+      "General Secretary Technical Affairs": "Tejas Sakhalkar",
+      "General Secretary Sports Affairs": "Sadaksh Chauhan"
+    }
+  },
+  {
+    "year": "2020-21",
+    "posts": {
+      "General Secretary Academic Affairs (PG)": "Radhik Rammohan",
+      "General Secretary Academic Affairs (UG)": "Madhav Gupta",
+      "General Secretary Cultural Affairs": "Nandlal chaoudhry",
+      "General Secretary Hostel Affairs": "Zakir Hussain",
+      "General Secretary Technical Affairs": "Anirudh Mittal",
+      "General Secretary Sports Affairs": "Yogendar Singh"
+    }
+  },
+  {
+    "year": "2019-20",
+    "posts": {
       "General Secretary Academic Affairs (PG)": "Aditya Chalishazar",
       "General Secretary Academic Affairs (UG)": "Varshit Kumar",
       "General Secretary Cultural Affairs": "Raghav Goyal",
